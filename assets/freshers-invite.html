@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff7f2">
+  <title>A little invitation | Freshers Night</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #fff7f2;
+      --ink: #1d3029;
+      --muted: #68746d;
+      --green: #176047;
+      --coral: #e26c4e;
+      --rose: #d9687d;
+      --line: rgba(95, 59, 62, .2);
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    body { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; margin: 0; background: var(--paper) url("freshers-hearts.svg") center / cover fixed; color: var(--ink); font-family: var(--sans); }
+    .wrap { width: min(1100px, calc(100% - 48px)); margin-inline: auto; }
+    .masthead, .foot { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .masthead { padding-block: 25px; border-bottom: 1px solid var(--line); }
+    .brand { display: inline-flex; align-items: center; border-radius: 3px; padding: 8px 12px; background: #c43f50; color: white; font-family: var(--serif); font-size: 23px; font-weight: 700; white-space: nowrap; }
+    .edition { display: flex; align-items: center; gap: 9px; color: var(--ink); font-size: 13px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
+    .wantam { display: inline-block; border-radius: 3px; padding: 6px 10px; background: #c43f50; color: white; font-size: 15px; font-weight: 700; letter-spacing: .04em; text-transform: none; }
+    main { width: min(780px, calc(100% - 48px)); align-self: center; justify-self: center; padding-block: 65px; }
+    .question { position: relative; padding: clamp(26px, 6vw, 64px); border: 1px solid var(--line); border-radius: 4px; background: rgba(255, 253, 251, .9); box-shadow: 0 16px 44px rgba(118, 54, 69, .08); backdrop-filter: blur(5px); }
+    .eyebrow { display: flex; align-items: center; gap: 10px; margin: 0 0 21px; color: var(--green); font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+    .eyebrow::before { width: 24px; height: 1px; background: var(--coral); content: ""; }
+    .eyebrow::after { margin-left: 2px; color: var(--rose); content: "♥"; font-size: 13px; }
+    h1 { max-width: 640px; margin: 0; font-family: var(--serif); font-size: clamp(42px, 7vw, 76px); font-weight: 500; line-height: 1.08; }
+    .hearts { position: absolute; top: 18px; right: 23px; color: var(--rose); font-size: 22px; transform: rotate(12deg); }
+    .invite-video-frame { width: clamp(180px, 26vw, 236px); aspect-ratio: 1; overflow: hidden; margin: 18px auto 0; border: 4px solid #fff; border-radius: 18px; background: #241a1b; box-shadow: 0 10px 28px rgba(118, 54, 69, .16); }
+    .invite-video-frame video { width: 100%; height: 100%; display: block; object-fit: cover; }
+    .video-note { margin: 10px 0 0; color: var(--muted); font-size: 15px; line-height: 1.5; text-align: center; }
+    .arena { position: relative; min-height: 190px; margin-top: 28px; border-top: 1px solid var(--line); }
+    .answer { position: absolute; top: 42px; min-width: 92px; height: 48px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--green); border-radius: 4px; padding: 0 20px; background: var(--green); color: white; font: 600 12px var(--sans); text-decoration: none; cursor: pointer; transition: left .16s ease, top .16s ease, background .16s ease; }
+    .answer:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
+    .yes { left: calc(50% - 104px); }
+    .yes:hover { background: #104b36; }
+    .no { left: calc(50% + 12px); background: transparent; color: var(--green); }
+    .no:hover { background: rgba(217, 104, 125, .08); }
+    .plea { margin: -20px 0 0; color: var(--rose); font-size: 15px; line-height: 1.6; text-align: center; }
+    .foot { padding-block: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 10px; }
+    @media (max-width: 520px) {
+      .wrap { width: calc(100% - 32px); }
+      .masthead { padding-block: 18px; }
+      .masthead { gap: 8px; flex-wrap: wrap; }
+      .brand { padding: 6px 8px; font-size: 18px; }
+      .edition { gap: 5px; font-size: 10px; letter-spacing: 0; }
+      .wantam { padding: 4px 7px; font-size: 12px; }
+      main { width: calc(100% - 32px); padding-block: 38px; }
+      .question { padding: 34px 22px; }
+      h1 { font-size: clamp(39px, 11vw, 54px); }
+      .invite-video-frame { width: 180px; }
+      .video-note { font-size: 14px; }
+      .plea { font-size: 14px; }
+      .arena { min-height: 185px; }
+      .foot { flex-wrap: wrap; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body>
+  <header class="masthead wrap">
+    <div class="brand">kin Dih Kih</div>
+    <div class="edition"><span>Freshers night · 2026</span><span class="wantam">wantam</span></div>
+  </header>
+  <main>
+    <section class="question" aria-labelledby="question-title">
+      <span class="hearts" aria-hidden="true">♥</span>
+      <p class="eyebrow">Just one more thing</p>
+      <h1 id="question-title">Would you go to Freshers Night with me?</h1>
+      <div class="invite-video-frame">
+        <video autoplay muted loop playsinline preload="auto" aria-label="A looping Freshers Night invitation clip">
+          <source src="freshers-invite.mp4" type="video/mp4">
+        </video>
+      </div>
+      <p class="video-note">I promise the hangout will be less awkward than this video. My dance moves are still loading.</p>
+      <div class="arena" id="answer-arena" aria-label="Choose your answer">
+        <a class="answer yes" href="yaaaay.html">Yes</a>
+        <button class="answer no" id="no-button" type="button">No</button>
+      </div>
+      <p class="plea">I’d really love to go with you ♥ I promise I'm only slightly this nervous in person.</p>
+    </section>
+  </main>
+  <footer class="foot wrap"><span>Stories · Nairobi</span><span>Freshers night, 2026</span></footer>
+  <script>
+    const arena = document.querySelector("#answer-arena");
+    const noButton = document.querySelector("#no-button");
+    const yesButton = document.querySelector(".yes");
+
+    function moveNoButton(event) {
+      if (event.type === "click") event.preventDefault();
+
+      const maxLeft = Math.max(0, arena.clientWidth - noButton.offsetWidth);
+      const maxTop = Math.max(0, arena.clientHeight - noButton.offsetHeight);
+      const yesLeft = yesButton.offsetLeft;
+      const yesTop = yesButton.offsetTop;
+      let left = 0;
+      let top = 0;
+
+      for (let attempt = 0; attempt < 20; attempt += 1) {
+        left = Math.round(Math.random() * maxLeft);
+        top = Math.round(Math.random() * maxTop);
+        const overlapsYes = left < yesLeft + yesButton.offsetWidth + 12
+          && left + noButton.offsetWidth + 12 > yesLeft
+          && top < yesTop + yesButton.offsetHeight + 12
+          && top + noButton.offsetHeight + 12 > yesTop;
+        if (!overlapsYes) break;
+      }
+
+      noButton.style.left = `${left}px`;
+      noButton.style.top = `${top}px`;
+    }
+
+    noButton.addEventListener("pointerenter", moveNoButton);
+    noButton.addEventListener("focus", moveNoButton);
+    noButton.addEventListener("click", moveNoButton);
+    noButton.addEventListener("touchstart", moveNoButton, { passive: true });
+  </script>
+</body>
+</html>

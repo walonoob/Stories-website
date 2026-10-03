@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f0e5">
+  <title>Yaaaayyyyyy! | Freshers Night</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #fff7f2;
+      --ink: #1d3029;
+      --muted: #68746d;
+      --green: #176047;
+      --coral: #e26c4e;
+      --rose: #d9687d;
+      --line: rgba(95, 59, 62, .2);
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    body { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; margin: 0; background: var(--paper) url("freshers-hearts.svg") center / cover fixed; color: var(--ink); font-family: var(--sans); }
+    .wrap { width: min(1100px, calc(100% - 48px)); margin-inline: auto; }
+    .masthead, .foot { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .masthead { padding-block: 25px; border-bottom: 1px solid var(--line); }
+    .brand { display: inline-flex; align-items: center; border-radius: 3px; padding: 8px 12px; background: #c43f50; color: white; font-family: var(--serif); font-size: 23px; font-weight: 700; white-space: nowrap; }
+    .edition { display: flex; align-items: center; gap: 9px; color: var(--ink); font-size: 13px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
+    .wantam { display: inline-block; border-radius: 3px; padding: 6px 10px; background: #c43f50; color: white; font-size: 15px; font-weight: 700; letter-spacing: .04em; text-transform: none; }
+    main { width: min(820px, calc(100% - 48px)); align-self: center; justify-self: center; padding-block: 42px; text-align: center; }
+    .eyebrow { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0 0 17px; color: var(--green); font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+    .eyebrow::before, .eyebrow::after { width: 24px; height: 1px; background: var(--coral); content: ""; }
+    .hearts { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 0 0 12px; color: var(--rose); }
+    .hearts span:nth-child(1), .hearts span:nth-child(3) { font-size: 15px; }
+    .hearts span:nth-child(2) { font-size: 23px; animation: float 2.6s ease-in-out infinite; }
+    h1 { margin: 0; color: var(--rose); font-family: var(--serif); font-size: clamp(44px, 7vw, 76px); font-weight: 500; line-height: 1.06; }
+    .message { margin: 10px 0 0; color: var(--ink); font-family: var(--serif); font-size: clamp(17px, 2.5vw, 23px); line-height: 1.45; }
+    .video-frame { width: clamp(240px, 34vw, 310px); aspect-ratio: 3 / 1; overflow: hidden; margin: 20px auto 0; border: 4px solid #fff; border-radius: 16px; background: #241a1b; box-shadow: 0 12px 34px rgba(118, 54, 69, .2); }
+    .video-frame video { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center top; }
+    .feeling { margin: 12px 0 0; color: var(--rose); font-size: 19px; font-weight: 700; }
+    .sticker-note { margin: 7px 0 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+    .joke { margin: 15px 0 0; color: var(--muted); font-size: 14px; }
+    @keyframes float { 50% { transform: translateY(-5px); } }
+    .foot { padding-block: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 10px; }
+    @media (max-width: 520px) {
+      .wrap { width: calc(100% - 32px); }
+      .masthead { padding-block: 18px; }
+      .masthead { gap: 8px; flex-wrap: wrap; }
+      .brand { padding: 6px 8px; font-size: 18px; }
+      .edition { gap: 5px; font-size: 10px; letter-spacing: 0; }
+      .wantam { padding: 4px 7px; font-size: 12px; }
+      main { width: calc(100% - 32px); padding-block: 40px; }
+      main { padding-block: 30px; }
+      h1 { font-size: clamp(40px, 11vw, 56px); }
+      .message { font-size: clamp(16px, 5vw, 20px); }
+      .foot { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+  <header class="masthead wrap">
+    <div class="brand">kin Dih Kih</div>
+    <div class="edition"><span>Freshers night · 2026</span><span class="wantam">wantam</span></div>
+  </header>
+  <main>
+    <p class="hearts" aria-hidden="true"><span>♥</span><span>♥</span><span>♥</span></p>
+    <p class="eyebrow">Well, this is exciting</p>
+    <h1>Yaaaayyyyyy!</h1>
+    <p class="message">It's gonna be worth the experience.</p>
+    <div class="video-frame">
+      <video id="sticker-video" autoplay muted loop playsinline preload="auto" aria-label="A short looping Freshers Night clip">
+        <source src="freshers-night.mp4" type="video/mp4">
+      </video>
+    </div>
+    <p class="feeling">Genuinely feeling myself 😏🗿😎</p>
+    <p class="sticker-note">Freshers Night isn't ready for this aura.</p>
+    <p class="joke">I definitely didn't build three webpages for this. Okay, I did.</p>
+  </main>
+  <footer class="foot wrap"><span>Stories · Nairobi</span><span>Freshers night, 2026</span></footer>
+  <script>
+    const stickerVideo = document.querySelector("#sticker-video");
+    stickerVideo.addEventListener("timeupdate", () => {
+      if (stickerVideo.currentTime >= 3) {
+        stickerVideo.pause();
+        stickerVideo.currentTime = 0;
+        stickerVideo.addEventListener("seeked", () => stickerVideo.play().catch(() => {}), { once: true });
+      }
+    });
+    stickerVideo.play().catch(() => {});
+  </script>
+</body>
+</html>

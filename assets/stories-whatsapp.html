@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff7f2">
+  <title>Thank You | Stories</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #fff7f2;
+      --ink: #1d3029;
+      --muted: #58665f;
+      --green: #176047;
+      --coral: #e26c4e;
+      --rose: #c94f68;
+      --line: rgba(95, 59, 62, .22);
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    body { min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto; margin: 0; background: linear-gradient(rgba(255, 247, 242, .48), rgba(255, 247, 242, .66)), url("stories-front.jpg") center 45% / cover fixed; color: var(--ink); font-family: var(--sans); }
+    .wrap { width: min(1080px, calc(100% - 48px)); margin-inline: auto; }
+    .masthead, .foot { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .masthead { padding-block: 24px; border-bottom: 1px solid var(--line); }
+    .brand { display: inline-flex; align-items: center; border-radius: 3px; padding: 8px 12px; background: #c43f50; color: white; font-family: var(--serif); font-size: 23px; font-weight: 700; white-space: nowrap; }
+    .edition { border-radius: 3px; padding: 7px 10px; background: #c43f50; color: white; font-size: 14px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+    main { width: min(760px, calc(100% - 48px)); align-self: center; justify-self: center; padding-block: 62px; }
+    .card { padding: clamp(26px, 6vw, 64px); border: 1px solid var(--line); border-radius: 4px; background: rgba(255, 253, 251, .88); box-shadow: 0 16px 44px rgba(118, 54, 69, .1); backdrop-filter: blur(7px); text-align: center; }
+    .heart { display: block; margin-bottom: 10px; color: var(--rose); font-size: 28px; }
+    .eyebrow { margin: 0 0 18px; color: var(--green); font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+    h1 { margin: 0; color: var(--rose); font-family: var(--serif); font-size: clamp(40px, 6vw, 68px); font-weight: 500; line-height: 1.1; }
+    .copy { max-width: 530px; margin: 20px auto 0; color: var(--muted); font-size: 16px; line-height: 1.7; }
+    .button { min-height: 50px; display: inline-flex; align-items: center; justify-content: center; margin-top: 26px; border: 1px solid var(--green); border-radius: 4px; padding: 0 22px; background: var(--green); color: white; font-size: 14px; font-weight: 700; text-decoration: none; transition: background .16s ease; }
+    .button:hover { background: #104b36; }
+    .foot { padding-block: 18px; border-top: 1px solid var(--line); color: #4f5d56; font-size: 12px; }
+    @media (max-width: 520px) {
+      .wrap { width: calc(100% - 32px); }
+      .masthead { padding-block: 18px; }
+      .brand { padding: 6px 8px; font-size: 20px; }
+      .edition { font-size: 11px; }
+      main { width: calc(100% - 32px); padding-block: 36px; }
+      .card { padding: 36px 22px; }
+      h1 { font-size: clamp(38px, 10vw, 50px); }
+      .copy { font-size: 15px; }
+      .button { width: 100%; }
+      .foot { flex-wrap: wrap; font-size: 11px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="masthead wrap">
+    <div class="brand">Stories</div>
+    <div class="edition">Website idea · 2026</div>
+  </header>
+  <main>
+    <section class="card" aria-labelledby="thanks-title">
+      <span class="heart" aria-hidden="true">♥</span>
+      <p class="eyebrow">Thanks for hearing me out</p>
+      <h1 id="thanks-title">Here’s my idea for Stories.</h1>
+      <p class="copy">I made a website concept for Stories and would love your feedback. Tap below to send me a message on WhatsApp.</p>
+      <a class="button" href="https://wa.me/254745852740?text=Hello%20Stories%2C%20I%20created%20a%20website%20concept%20for%20you%20and%20would%20love%20to%20share%20it.%20I%E2%80%99d%20appreciate%20your%20feedback." target="_blank" rel="noopener noreferrer">Send feedback on WhatsApp</a>
+    </section>
+  </main>
+  <footer class="foot wrap"><span>Stories · Nairobi</span><span>Thanks for taking a look at my idea</span></footer>
+</body>
+</html>
